@@ -1,0 +1,369 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+#scrollToTop {
+    display: none; /* Inicialmente escondido */
+    position: fixed; /* Fixo na tela */
+    bottom: 20px; /* Distância do fundo */
+    right: 20px; /* Distância da direita */
+    width: 40px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    background-color: #333; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    line-height: 40px; /* Centraliza verticalmente o texto */
+    font-size: 22px; /* Tamanho da fonte */
+    border-radius: 50%; /* Arredonda os cantos */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    z-index: 1000; /* Fica acima de outros elementos */
+    transition: opacity 0.3s ease, transform 0.3s ease;; /* Transição suave */
+}
+
+#scrollToTop:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+	overflow-x: hidden; /* Evitar rolagem horizontal */
+}
+
+.container {
+	display: block; /* Garante que o container se comporte como um bloco */
+    width: 82%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.container_solucoes {
+	display: block; /* Garante que o container se comporte como um bloco */
+    width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5); /* Adicionado fundo semitransparente para melhor leitura */
+    padding: 20px;
+    border-radius: 19px;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 5px 0;
+    overflow: hidden;
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+    padding: 0 15px;
+}
+
+header .logo {
+    height: 50px;
+    width: auto;
+    float: left;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+nav {
+    float: right;
+    height: 50px; /* Defina a altura conforme necessário */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: right;
+    margin-top: 15px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 17px;
+	vertical-align: middle; /* Alinha verticalmente ao meio */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 5px;
+    transition: box-shadow 0.3s ease; /* Adiciona uma transição suave */
+}
+
+nav ul li a:hover {
+    color:rgb(30, 30, 30);
+    background-color: rgb(142, 141, 141);
+    filter: blur(4px);
+    box-shadow: 0 12px 8px rgba(0, 0, 0, 0.3), /* Sombra principal */
+                0 0 17px rgb(142, 141, 141); /* Sombra colorida ao hover */
+}
+
+.hero {
+    width: 100%;
+    height: auto; /* Altura desejada da seção hero */
+    background: url('img/hero-img.jpg') no-repeat center center;
+    background-size: cover; /* Adiciona esta linha para cobrir o elemento com a imagem */
+    color: #fff;
+    text-align: center;
+    position: relative; /* Adicionado para facilitar o posicionamento */
+	overflow: hidden; /* Garante que nada ultrapasse os limites */
+}
+
+.hero h2 {
+    margin: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.project {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.project img {
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.aquitetura_x {
+    background: #ff7f50;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 9.5px;
+}
+
+.services, .contact {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.about {
+    padding: 50px 0;
+    text-align: justify;
+    background-color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-indent: 20px;
+}
+
+.about h2{
+    padding: 10px 1em 8.5px 1em;
+    text-align: center;
+}
+
+.about p {
+    padding: 9px 1em 7.5 1em;
+}
+
+.about p::first-letter {
+    font-size: 150%; /* Tamanho maior para a primeira letra */
+    color: #ff7f50; /* Cor diferente para a primeira letra */
+    font-weight: lighter;
+    margin-right: 5px; /* Opcional: margem direita para separar da próxima letra */
+}
+
+.portfolio_text {
+    font-style: italic;
+    font-weight: 500;
+    font-size: large;
+}
+
+.portfolio {
+    padding: 50px 0;
+    text-align: justify;
+    background-color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-indent: 20px;
+}
+
+.portfolio h2{
+    padding: 10px 1em 8.5px 1em;
+    text-align: center;
+}
+
+.portfolio h3{
+padding: 9px 3em 6.5px 3em;
+text-align: center;
+}
+
+.portfolio p {
+    padding: 9px 1em 7.5 1em;
+    text-align: center;
+}
+
+.services {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 20px;
+    overflow: hidden; /* Para conter os elementos flutuantes */
+}
+
+.services .service {
+    width: 30%;
+    float: left;
+    padding: 20px 1em 15px 1em;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    margin: 10px 1.5%;
+    border-radius: 19px;
+}
+
+.services h2 {
+    padding: 10px 1em 8.5px 1em;
+    text-align: center;
+}
+
+.services .service h3 {
+    padding: 9px 3em 6.5px 3em;
+    text-align: center;
+}
+
+.services .service p {
+    padding: 7px 1em 6.5px 1em;
+    line-height: 1.6;
+    text-indent: 20px;
+    text-align: justify;
+}
+
+.services:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10.5px;
+}
+
+.contact form button {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 9.5px;
+}
+
+.contact form button:hover {
+    background: #555;
+}
+
+.budget {
+    padding: 50px 0;
+}
+
+.budget h2 {
+    padding: 10px 1em 8.5px 1em;
+    text-align: center;
+}
+
+.budget form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.budget form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.budget form input, .budget form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10.5px;
+}
+
+.budget form button {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 9.5px;
+}
+
+.budget form button:hover {
+    background: #555;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 17.5px 0;
+    clear: both;
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-inline: 10px;
+    text-decoration: none;
+    color: #fff;
+    background: #444;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 45.5px; /* Centraliza verticalmente o ícone */
+    box-shadow: 4px 2.75px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon:hover {
+    background: #555;
+}
+
+.social-icon i {
+    font-size: 20px; /* Ajusta o tamanho do ícone */
+}
